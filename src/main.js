@@ -44,7 +44,7 @@ try {
         requestHandler: router, // Pass the router as the request handler
         launchContext: {
             launchOptions: {
-                headless: false,
+                headless: true,
             },
         },
     });
