@@ -46,8 +46,6 @@ try {
                 headless: false,
             },
         },
-        requestTimeout: 1800000, // Set to 30 minutes
-        maxRequestRetries: 5, // Optional: number of retries for failed requests
     });
 
     // Start the crawler with the specified startUrl
