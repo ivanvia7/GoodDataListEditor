@@ -41,7 +41,6 @@
             "type": "string",
             "description": "Your Google account password for login.",
             "editor": "textfield",
-            "prefill": "yourpassword",
             "isSecret": true
         }
     },
