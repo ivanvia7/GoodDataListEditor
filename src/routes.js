@@ -19,8 +19,7 @@ router.addDefaultHandler(async ({ log, page, request }) => {
     await page.waitForLoadState("load");
 
     for (const user of userIDs) {
-        const userId = user.id;
-        log.info(`Working with user ID: ${userId}`);
+        log.info(`Working with user ID: ${user}`);
         try {
             // Click the button to add a sales representative
             await page.click(
@@ -34,7 +33,7 @@ router.addDefaultHandler(async ({ log, page, request }) => {
             );
 
             // Search for the user ID
-            await page.getByPlaceholder("Search…").fill(userId);
+            await page.getByPlaceholder("Search…").fill(user);
 
             await page.waitForTimeout(2500);
 
@@ -44,7 +43,7 @@ router.addDefaultHandler(async ({ log, page, request }) => {
             if ((await checkbox.count()) > 0) {
                 await checkbox.click(); // Simulate user interaction
             } else {
-                log.warn(`Checkbox for user ID ${userId} not found.`);
+                log.warn(`Checkbox for user ID ${user} not found.`);
             }
 
             const button = page.locator('button[title="Apply"]');
@@ -60,9 +59,9 @@ router.addDefaultHandler(async ({ log, page, request }) => {
 
             await page.click(".s-save-button");
 
-            log.info(`User saved: ${userId}`);
+            log.info(`User saved: ${user}`);
         } catch (e) {
-            log.error(`Error processing user ID ${userId}: ${e.message}`);
+            log.error(`Error processing user ID ${user}: ${e.message}`);
             log.debug(e.stack); // Log the stack trace for better debugging
         }
     }

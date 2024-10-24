@@ -24,9 +24,9 @@
             },
             "editor": "stringList",
             "prefill": [
-                { "id": "L3SQCzrXXymiRdD83" },
-                { "id": "JR8MXya2qZx93sSaS" },
-                { "id": "tbdN5nxesP9DpGF7d" }
+                "L3SQCzrXXymiRdD83",
+                "JR8MXya2qZx93sSaS",
+                "tbdN5nxesP9DpGF7d"
             ]
         },
         "GD_USER": {

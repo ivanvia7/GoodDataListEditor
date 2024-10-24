@@ -21,7 +21,7 @@ try {
     if (
         !Array.isArray(userIDs) ||
         userIDs.length === 0 ||
-        userIDs.some((user) => typeof user.id !== "string")
+        userIDs.some((user) => typeof user !== "string")
     ) {
         throw new Error(
             "Invalid input: 'userIDs' must be a non-empty array of objects containing string 'id'."
@@ -35,8 +35,6 @@ try {
     }
 
     // Extract the list of user IDs from the objects
-    const userIdList = userIDs.map((user) => user.id);
-
     // Create a proxy configuration if needed
     const proxyConfiguration = await Actor.createProxyConfiguration();
 
