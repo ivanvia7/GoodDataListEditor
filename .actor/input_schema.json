@@ -1,0 +1,49 @@
+{
+    "title": "PlaywrightCrawler Template",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrl": {
+            "title": "Start URLs",
+            "type": "string",
+            "description": "URLs to start with.",
+            "editor": "text",
+            "prefill": "https://bizztreat.na.gooddata.com/analyze/#/b8wz5c18b3h74263vlo0aw1h5rlasox1/105661/edit"
+        },
+        "userIDs": {
+            "title": "User IDs",
+            "type": "array",
+            "description": "List of user IDs to be processed.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    }
+                }
+            },
+            "editor": "textArray",
+            "prefill": [
+                { "id": "L3SQCzrXXymiRdD83" },
+                { "id": "JR8MXya2qZx93sSaS" },
+                { "id": "tbdN5nxesP9DpGF7d" }
+            ]
+        },
+        "GD_USER": {
+            "title": "Google Username",
+            "type": "string",
+            "description": "Your Google account username for login.",
+            "editor": "text",
+            "prefill": "your.email@gmail.com"
+        },
+        "GD_PWD": {
+            "title": "Google Password",
+            "type": "string",
+            "description": "Your Google account password for login.",
+            "editor": "text",
+            "prefill": "yourpassword",
+            "secret": true
+        }
+    },
+    "required": ["startUrl", "userIDs", "GD_USER", "GD_PWD"]
+}
