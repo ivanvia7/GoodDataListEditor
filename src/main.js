@@ -39,7 +39,8 @@ try {
     const proxyConfiguration = await Actor.createProxyConfiguration();
 
     const crawler = new PlaywrightCrawler({
-        requestHandlerTimeoutSecs: 1800,
+        requestHandlerTimeoutSecs: 2400,
+        maxConcurrency: 1,
         proxyConfiguration, // Your proxy configuration
         requestHandler: router, // Pass the router as the request handler
         launchContext: {
