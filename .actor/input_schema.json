@@ -42,7 +42,7 @@
             "description": "Your Google account password for login.",
             "editor": "textfield",
             "prefill": "yourpassword",
-            "secret": true
+            "isSecret": true
         }
     },
     "required": ["startUrl", "userIDs", "GD_USER", "GD_PWD"]
