@@ -4,9 +4,9 @@
     "schemaVersion": 1,
     "properties": {
         "startUrl": {
-            "title": "Start URLs",
+            "title": "Your URL to the target sheet where you want to add users",
             "type": "string",
-            "description": "URLs to start with.",
+            "description": "URL to start with",
             "editor": "textfield",
             "prefill": "https://bizztreat.na.gooddata.com/analyze/#/b8wz5c18b3h74263vlo0aw1h5rlasox1/105661/edit"
         },
