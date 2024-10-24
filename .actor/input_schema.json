@@ -33,14 +33,14 @@
             "title": "Google Username",
             "type": "string",
             "description": "Your Google account username for login.",
-            "editor": "text",
+            "editor": "textfield",
             "prefill": "your.email@gmail.com"
         },
         "GD_PWD": {
             "title": "Google Password",
             "type": "string",
             "description": "Your Google account password for login.",
-            "editor": "text",
+            "editor": "textfield",
             "prefill": "yourpassword",
             "secret": true
         }
