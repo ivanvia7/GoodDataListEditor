@@ -30,16 +30,16 @@
             ]
         },
         "GD_USER": {
-            "title": "Google Username",
+            "title": "GoodData email",
             "type": "string",
-            "description": "Your Google account username for login.",
+            "description": "Your GoodData account username for login.",
             "editor": "textfield",
             "prefill": "your.email@gmail.com"
         },
         "GD_PWD": {
-            "title": "Google Password",
+            "title": "GoodData Password",
             "type": "string",
-            "description": "Your Google account password for login.",
+            "description": "Your GoodData account password for login.",
             "editor": "textfield",
             "isSecret": true
         }
