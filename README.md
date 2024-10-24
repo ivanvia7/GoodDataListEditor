@@ -1,4 +1,4 @@
-# Automation Tool for Adding Contacts
+# Automation Tool for Adding Contacts to GoodData
 
 ## Overview
 This automation tool leverages Playwright to automate the process of logging into a web application and adding contacts based on a list of user IDs. The tool is designed to streamline the task of managing contacts efficiently and accurately.
@@ -9,7 +9,7 @@ This automation tool leverages Playwright to automate the process of logging int
 - **Error Handling**: Provides logging for any issues encountered during the process.
 
 ## Requirements
-- Node.js (version X.X.X or later)
+- Node.js
 - Playwright
 - Apify SDK
 - Access to the web application with valid Google credentials
