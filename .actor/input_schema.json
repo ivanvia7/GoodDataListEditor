@@ -15,7 +15,7 @@
             "type": "array",
             "description": "List of user IDs to be processed.",
             "items": {
-                "type": "object",
+                "type": "string",
                 "properties": {
                     "id": {
                         "type": "string"
