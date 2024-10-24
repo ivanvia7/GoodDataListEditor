@@ -22,7 +22,7 @@
                     }
                 }
             },
-            "editor": "textArray",
+            "editor": "stringList",
             "prefill": [
                 { "id": "L3SQCzrXXymiRdD83" },
                 { "id": "JR8MXya2qZx93sSaS" },
