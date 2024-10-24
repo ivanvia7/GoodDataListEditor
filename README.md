@@ -1,64 +1,63 @@
-## PlaywrightCrawler template
+Automation Tool for Adding Contacts
+Overview
+This automation tool leverages Playwright to automate the process of logging into a web application and adding contacts based on a list of user IDs. The tool is designed to streamline the task of managing contacts efficiently and accurately.
 
-This template is a production-ready boilerplate for developing an [Actor](https://apify.com/actors) with `PlaywrightCrawler`. Use this to bootstrap your projects using the most up-to-date code.
+Features
+Automated Login: Logs into the web application using provided Google credentials.
+Dynamic User ID Handling: Accepts a list of user IDs to be added, ensuring that no duplicates exist within the input list.
+Error Handling: Provides logging for any issues encountered during the process.
+Requirements
+Node.js (version X.X.X or later)
+Playwright
+Apify SDK
+Access to the web application with valid Google credentials
+Installation
+Clone this repository to your local machine:
 
-> We decided to split Apify SDK into two libraries, Crawlee and Apify SDK v3. Crawlee will retain all the crawling and scraping-related tools and will always strive to be the best [web scraping](https://apify.com/web-scraping) library for its community. At the same time, Apify SDK will continue to exist, but keep only the Apify-specific features related to building actors on the Apify platform. Read the upgrading guide to learn about the changes.
-> 
+bash
+Copy code
+git clone https://github.com/yourusername/repository-name.git
+cd repository-name
+Install the required dependencies:
 
-## Resources
+bash
+Copy code
+npm install
+Configuration
+Before running the tool, make sure to configure the input parameters in the INPUT.json file. The following parameters are required:
 
-If you're looking for examples or want to learn more visit:
+startUrl: The URL to start the automation process.
+userIDs: An array of user IDs that you want to add as contacts.
+Important: One of the IDs included in this list must not duplicate any other ID already in your list. Ensure that each ID is unique to avoid conflicts during the addition of contacts.
+GD_USER: Your Google account username for login.
+GD_PWD: Your Google account password for login.
+Example INPUT.json
+json
+Copy code
+{
+    "startUrl": "https://bizztreat.na.gooddata.com/analyze/#/b8wz5c18b3h74263vlo0aw1h5rlasox1/105661/edit",
+    "userIDs": [
+        { "id": "L3SQCzrXXymiRdD83" },
+        { "id": "JR8MXya2qZx93sSaS" },
+        { "id": "tbdN5nxesP9DpGF7d" }
+    ],
+    "GD_USER": "your.email@gmail.com",
+    "GD_PWD": "yourpassword"
+}
+Usage
+To run the automation tool, execute the following command in your terminal:
 
-- [Crawlee + Apify Platform guide](https://crawlee.dev/docs/guides/apify-platform)
-- [Documentation](https://crawlee.dev/api/playwright-crawler/class/PlaywrightCrawler) and [examples](https://crawlee.dev/docs/examples/playwright-crawler)
-- [Node.js tutorials](https://docs.apify.com/academy/node-js) in Academy
-- [Scraping single-page applications with Playwright](https://blog.apify.com/scraping-single-page-applications-with-playwright/)
-- [How to scale Puppeteer and Playwright](https://blog.apify.com/how-to-scale-puppeteer-and-playwright/)
-- [Integration with Zapier](https://apify.com/integrations), Make, GitHub, Google Drive and other apps
-- [Video guide on getting data using Apify API](https://www.youtube.com/watch?v=ViYYDHSBAKM)
-- A short guide on how to create Actors using code templates:
+bash
+Copy code
+node src/main.js
+Important Notes
+Make sure that the user ID you are adding does not already exist in the system. The tool is designed to handle unique user IDs to prevent duplication.
+If a user ID already exists in your list, the tool may log an error but will continue processing the remaining user IDs.
+Logging
+The tool provides detailed logs of the actions performed and any errors encountered. Check the console output for information on the success or failure of each operation.
 
-[web scraper template](https://www.youtube.com/watch?v=u-i-Korzf8w)
+Contributing
+Feel free to submit issues or requests for enhancements. Contributions are welcome!
 
-
-## Getting started
-
-For complete information [see this article](https://docs.apify.com/platform/actors/development#build-actor-locally). To run the actor use the following command:
-
-```bash
-apify run
-```
-
-## Deploy to Apify
-
-### Connect Git repository to Apify
-
-If you've created a Git repository for the project, you can easily connect to Apify:
-
-1. Go to [Actor creation page](https://console.apify.com/actors/new)
-2. Click on **Link Git Repository** button
-
-### Push project on your local machine to Apify
-
-You can also deploy the project on your local machine to Apify without the need for the Git repository.
-
-1. Log in to Apify. You will need to provide your [Apify API Token](https://console.apify.com/account/integrations) to complete this action.
-
-    ```bash
-    apify login
-    ```
-
-2. Deploy your Actor. This command will deploy and build the Actor on the Apify Platform. You can find your newly created Actor under [Actors -> My Actors](https://console.apify.com/actors?tab=my).
-
-    ```bash
-    apify push
-    ```
-
-## Documentation reference
-
-To learn more about Apify and Actors, take a look at the following resources:
-
-- [Apify SDK for JavaScript documentation](https://docs.apify.com/sdk/js)
-- [Apify SDK for Python documentation](https://docs.apify.com/sdk/python)
-- [Apify Platform documentation](https://docs.apify.com/platform)
-- [Join our developer community on Discord](https://discord.com/invite/jyEM2PRvMU)
+License
+This project is licensed under the MIT License.
