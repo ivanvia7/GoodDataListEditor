@@ -7,7 +7,7 @@
             "title": "Start URLs",
             "type": "string",
             "description": "URLs to start with.",
-            "editor": "text",
+            "editor": "textfield",
             "prefill": "https://bizztreat.na.gooddata.com/analyze/#/b8wz5c18b3h74263vlo0aw1h5rlasox1/105661/edit"
         },
         "userIDs": {
